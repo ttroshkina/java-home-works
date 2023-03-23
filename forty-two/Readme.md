@@ -1,0 +1,7 @@
+- класс FortyTwo который наследует Number и имплементит Comparable
+- имеет поле value, которое может принимать только значение 42
+- переопределить все методы Number
+- имплементировать метод compareTo в соответствии с его описанием в интерфейсе
+- создать интерфейс TheUltimateQuestionOfLifeTheUniverseAndEverything с методом void getAnswer()
+- класс FortyTwo имплементит TheUltimateQuestionOfLifeTheUniverseAndEverything
+- метод getAnswer() напечатает в консоль значение поля value
