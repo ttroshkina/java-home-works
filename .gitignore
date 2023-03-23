@@ -1,0 +1,38 @@
+# Default ignored files
+/shelf/
+/.idea
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+target/
+.mvn
+mvnw*
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+*.log*
+/.integration-scripts
+
+.DS_Store
+/*/target
+/log*
+/*/log
+
+files/
+old/
+
