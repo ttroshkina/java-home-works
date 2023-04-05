@@ -2,7 +2,7 @@ package ru.qiwi.payments.dto;
 
 public class PaymentWithCommission extends Payment {
 
-    private int commission;
+    private final int commission;
 
     public PaymentWithCommission(int amount, int commission) {
         super(amount);
