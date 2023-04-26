@@ -1,22 +1,23 @@
 package ru.qiwi.payments.service;
 
-import org.springframework.stereotype.Service;
 import ru.qiwi.payments.dataprovider.PaymentsDataProvider;
 
 import java.util.Arrays;
+import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
-public abstract class PaymentAbstractServiceImpl<T> {
+public abstract class PaymentAbstractServiceImpl<T> implements PaymentService {
     protected PaymentsDataProvider paymentsDataProvider;
 
-    public abstract T[] getPayments();
+    public Supplier<T[]> getPayments;
 
-    public abstract int getTotalAmount(T payment);
+    public ToIntFunction<T> getTotalAmount;
 
     public int getTotalSum() {
-        return Arrays.stream(getPayments()).mapToInt(this::getTotalAmount).sum();
+        return Arrays.stream(getPayments.get()).mapToInt(p -> getTotalAmount.applyAsInt(p)).sum();
     }
 
     public int getPaymentsCount() {
-        return getPayments().length;
+        return getPayments.get().length;
     }
 }
